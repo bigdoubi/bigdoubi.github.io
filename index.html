@@ -186,7 +186,7 @@ This work pushes the boundaries of quadrotor navigation in unknown complex envir
         <tr> <td style="padding:10px;width:30%;vertical-align:middle">
           <div class="video-container" style="width: 330px; height: 186.0px;">
             <video width="100%" height="100%" muted autoplay loop playsinline>
-              <source src="data/video/IROS2025_tan.mp4" type="video/mp4">
+              <source src="data/video/diff_sim.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
           </div>
@@ -196,16 +196,14 @@ This work pushes the boundaries of quadrotor navigation in unknown complex envir
             <span class="papertitle">Real-time Spatial-temporal Traversability Assessment via Feature-based Sparse Gaussian Process</span>
           </a>
           <br>
-          Senming Tan*, Zhenyu Hou*, Zhihao Zhang*, Long Xu, <strong>Mengke Zhang</strong>, Zhaoqi He, Chao Xu, Fei Gao, Yanjun Cao
+          Nanhe Chen*, Jiajun Yu*, <strong>Mengke Zhang*</strong>, Pengxiang Zhou, Chao Xu, Fei Gao, Yanjun Cao
           <br>
-          <em>IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</em>, 2025, accepted  <br>
-          <a href="data/paper/iros2025_tan.pdf">Paper</a>
-
-          <!-- <a href="https://bigdoubi.github.io/Active_Perception_video/">Video</a> -->
+          <em>working</em>
+          
     <p style="text-align:justify;">
-本研究给出了崎岖地形实时感知方法，通过特征驱动的稀疏高斯过程（FSGP）与时空贝叶斯高斯核（BGK）融合框架，首次实现毫秒级高精度可通行性评估。 利用轻量化特征诱导点（计算耗时仅33.84ms），我们的方法在森林与室内环境中将地形预测误差降低46%，相较传统高程地图（EM）提速3.2倍。传统方法因依赖局部数据且无法融合历史观测（如SGP基线误差达0.2604），在动态环境中面临严重感知退化，而FSGP-BGK通过时空BGK融合保障了实时避障成功率。
+      本研究利用可微仿真实现差速机器人端到端导航。通过奖励 → 状态量 → 控制量 → 网络的梯度传播，极大提升了训练效率，基于单目深度的控制策略仅需数分钟即可收敛，解决传统强化学习采样效率低、训练慢的痛点。– 初步仿真验证，框架能高效学习避障等任务，在训练效率和稳定性上较传统 PPO 等方法展现出显著优势，正进一步拓展到非平坦地形等具有挑战性的环境。
 <br>
-This work pioneers real-time traversability assessment in unstructured terrains via a feature-driven Sparse Gaussian Process (FSGP) integrated with spatio-temporal Bayesian Gaussian Kernel (BGK) fusion, achieving millisecond-level high-precision mapping. Leveraging lightweight inducing points (33.84ms per inference), our approach reduces terrain prediction errors by 46% in forest/indoor scenes and outperforms traditional elevation maps (EM) by 3.2× speed. Whereas conventional methods suffer from perceptual degradation due to isolated local data processing (e.g., SGP baseline error: 0.2604), FSGP-BGK ensures real-time obstacle avoidance through BGK-based historical data fusion enabling autonomous navigation in complex environments where EM fails.
+This study leverages differentiable simulation to achieve end-to-end navigation for differential-drive robots. By propagating gradients from rewards → state variables → control inputs → the policy network, training efficiency is dramatically improved, enabling monocular-depth-based control policies to converge within just a few minutes. This directly addresses the low sample efficiency and slow training of traditional reinforcement learning. Preliminary simulation results confirm that the framework can rapidly learn obstacle avoidance and other tasks, demonstrating significant advantages in training speed and stability over conventional methods like PPO. Ongoing work is extending the approach to more challenging environments, including uneven terrain.
 
 
           </p>
